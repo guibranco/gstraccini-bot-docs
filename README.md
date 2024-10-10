@@ -2,10 +2,6 @@
 
 🤖 :octocat: **GStraccini-bot** is a GitHub bot designed to keep your repository organized and healthy by automating tasks like managing pull requests, issues, comments, and commits. This allows you to focus on solving real problems.
 
-[![Deploy via ftp](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/deploy.yml)
-[![PHP Linting](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/php-lint.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/php-lint.yml)
-[![JSON/YAML validation](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/json-yaml-lint.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-website/actions/workflows/json-yaml-lint.yml)
-
 ---
 
 ## About the Bot
