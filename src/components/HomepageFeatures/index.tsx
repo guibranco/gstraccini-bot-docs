@@ -41,6 +41,27 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
+/**
+ * Renders a feature component displaying an SVG icon, title, and description.
+ *
+ * @param {Object} params - The parameters for the feature component.
+ * @param {string} params.title - The title of the feature.
+ * @param {React.ComponentType} params.Svg - The SVG component to be displayed.
+ * @param {string} params.description - A brief description of the feature.
+ *
+ * @returns {JSX.Element} The rendered feature component.
+ *
+ * @example
+ * const MyFeature = () => (
+ *   <Feature
+ *     title="Feature Title"
+ *     Svg={MySvgIcon}
+ *     description="This is a description of the feature."
+ *   />
+ * );
+ *
+ * @throws {Error} Throws an error if the title or description is not provided.
+ */
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
@@ -55,6 +76,23 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
+/**
+ * Renders the homepage features section.
+ *
+ * This function is a React functional component that generates a section
+ * containing a list of features. Each feature is rendered using the
+ * `Feature` component, which receives its properties from the `FeatureList`.
+ *
+ * @returns {JSX.Element} A JSX element representing the features section.
+ *
+ * @example
+ * // Example usage of HomepageFeatures in a parent component
+ * const App = () => (
+ *   <div>
+ *     <HomepageFeatures />
+ *   </div>
+ * );
+ */
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
