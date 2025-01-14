@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install dependencies
         run: npm install
@@ -41,7 +41,7 @@ jobs:
         run: npm run build
 
       - name: Copy .htaccess
-        run: mv /src/.htaccess /build
+        run: mv /src/.htaccess /build/
 
       - name: Upload site
         uses: sebastianpopp/ftp-action@releases/v2
