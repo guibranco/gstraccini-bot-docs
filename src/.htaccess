@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^docs\.bot\.straccini\.com$ [NC]
+RewriteRule ^(.*)$ https://docs.bot.straccini.com/$1 [L,R=301]
+
+Options -Indexes
