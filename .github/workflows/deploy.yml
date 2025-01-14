@@ -41,7 +41,7 @@ jobs:
         run: npm run build
 
       - name: Copy .htaccess
-        run: mv /src/.htaccess /build/
+        run: mv src/.htaccess /build/
 
       - name: Upload site
         uses: sebastianpopp/ftp-action@releases/v2
