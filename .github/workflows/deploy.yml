@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Release
-        uses: ncipollo/release-action@v1.18.0
+        uses: ncipollo/release-action@v1.19.0
         with:
           allowUpdates: false
           skipIfReleaseExists: true
