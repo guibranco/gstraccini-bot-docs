@@ -2,46 +2,58 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**GStraccini-bot** is a GitHub bot designed to keep your repository organized and healthy by automating tasks like managing pull requests, issues, comments, and commits — so you can focus on solving real problems.
 
-## Getting Started
+## How It Works
 
-Get started by **creating a new site**.
+GStraccini-bot listens to GitHub webhooks and responds to commands posted in pull request and issue comments. To trigger a command, mention `@gstraccini` followed by the command name and any required parameters.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```
+@gstraccini <command> [parameters]
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+For example, to format your code with Prettier:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```
+@gstraccini prettier
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Run `@gstraccini help` in any PR or issue to see the full list of available commands.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+:::note
+If you are not allowed to use the bot, a 👎 reaction will be added to your comment.
+:::
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Installation
+
+1. Visit the [GitHub App page](https://github.com/apps/gstraccini)
+2. Click **Install**
+3. Choose the account or organization, then select **All repositories** or specific ones
+
+Once installed, GStraccini-bot will start processing your repository's events automatically.
+
+## Architecture
+
+GStraccini-bot is made up of several components:
+
+| Component | Description |
+|-----------|-------------|
+| [API](https://github.com/guibranco/gstraccini-bot-api) | Stats and configuration endpoints |
+| [Handler](https://github.com/guibranco/gstraccini-bot-handler) | Handles incoming GitHub webhooks |
+| [Service](https://github.com/guibranco/gstraccini-bot-service) | The main worker that processes tasks |
+| [Website](https://github.com/guibranco/gstraccini-bot-website) | Landing page and dashboard |
+| [Workflows](https://github.com/guibranco/gstraccini-bot-workflows) | GitHub Actions execution |
+
+## Cronjobs
+
+GStraccini-bot runs automated tasks every minute on its infrastructure, processing branches, comments, issues, pull requests, pushes, and repository events to keep everything up to date.
+
+## Useful Links
+
+- [GitHub App](https://github.com/apps/gstraccini)
+- [GitHub Marketplace](https://github.com/marketplace/gstraccini-bot)
+- [Dashboard](https://bot.straccini.com)
+- [Source Code](https://github.com/guibranco/gstraccini-bot-service)
+- [API](https://api.bot.straccini.com)
