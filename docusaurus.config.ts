@@ -3,27 +3,19 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'GStraccini-bot',
+  tagline: 'Automate your GitHub repository tasks with ease',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://docs.bot.straccini.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'gstraccini-bot', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'guibranco',
+  projectName: 'gstraccini-bot-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -35,10 +27,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/guibranco/gstraccini-bot-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/guibranco/gstraccini-bot-docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -46,11 +35,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/guibranco/gstraccini-bot-docs/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+          editUrl: 'https://github.com/guibranco/gstraccini-bot-docs/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -63,24 +48,28 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'GStraccini-bot',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'GStraccini-bot Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/apps/gstraccini',
+          label: 'Install Bot',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/guibranco/gstraccini-bot-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -93,25 +82,29 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
               to: '/docs/intro',
+            },
+            {
+              label: 'Commands',
+              to: '/docs/commands',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Links',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub App',
+              href: 'https://github.com/apps/gstraccini',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'GitHub Marketplace',
+              href: 'https://github.com/marketplace/gstraccini-bot',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Dashboard',
+              href: 'https://bot.straccini.com',
             },
           ],
         },
@@ -123,13 +116,17 @@ const config: Config = {
               to: '/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Source Code',
+              href: 'https://github.com/guibranco/gstraccini-bot-service',
+            },
+            {
+              label: 'API',
+              href: 'https://api.bot.straccini.com',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} GStraccini-bot. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

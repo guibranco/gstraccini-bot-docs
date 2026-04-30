@@ -1,11 +1,17 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
   width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+[data-theme='dark'] .features {
+  background-color: var(--ifm-background-color);
+}
+
+.featureIcon {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
 }

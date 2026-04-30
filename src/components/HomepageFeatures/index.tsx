@@ -4,69 +4,49 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'GitHub Native',
+    icon: '🤖',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Works directly in GitHub comments on pull requests and issues. No extra tools or
+        dashboards — just mention <code>@gstraccini</code> followed by a command.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '30+ Commands',
+    icon: '⚡',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Automate formatting, CI/CD, dependency updates, code quality checks, and more.
+        Supports <strong>.NET</strong>, <strong>Rust</strong>, <strong>Node.js</strong>,
+        {' '}AppVeyor, Codacy, and GitHub Actions.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Always Running',
+    icon: '🔄',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Runs every minute to process pull requests, issues, comments, commits, and pushes,
+        keeping your repository organized and healthy around the clock.
       </>
     ),
   },
 ];
 
-/**
- * Renders a feature component displaying an SVG icon, title, and description.
- *
- * @param {Object} params - The parameters for the feature component.
- * @param {string} params.title - The title of the feature.
- * @param {React.ComponentType} params.Svg - The SVG component to be displayed.
- * @param {string} params.description - A brief description of the feature.
- *
- * @returns {JSX.Element} The rendered feature component.
- *
- * @example
- * const MyFeature = () => (
- *   <Feature
- *     title="Feature Title"
- *     Svg={MySvgIcon}
- *     description="This is a description of the feature."
- *   />
- * );
- *
- * @throws {Error} Throws an error if the title or description is not provided.
- */
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, icon, description}: Readonly<FeatureItem>) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.featureIcon}>{icon}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -76,23 +56,6 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
-/**
- * Renders the homepage features section.
- *
- * This function is a React functional component that generates a section
- * containing a list of features. Each feature is rendered using the
- * `Feature` component, which receives its properties from the `FeatureList`.
- *
- * @returns {JSX.Element} A JSX element representing the features section.
- *
- * @example
- * // Example usage of HomepageFeatures in a parent component
- * const App = () => (
- *   <div>
- *     <HomepageFeatures />
- *   </div>
- * );
- */
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
