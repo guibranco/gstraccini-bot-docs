@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
         'commands/code-quality',
         'commands/npm',
         'commands/github',
+        'commands/php',
       ],
     },
   ],

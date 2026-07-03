@@ -28,10 +28,11 @@ Commands in the documentation use the following indicators:
 |----------|----------|
 | [General](./general) | `help`, `review` |
 | [AppVeyor](./appveyor) | `appveyor build`, `appveyor bump version`, `appveyor register`, `appveyor reset` |
-| [.NET](./dotnet) | `add project`, `bump version`, `csharpier`, `dotnet slnx`, `fix csproj`, `nuget check updates` |
+| [.NET](./dotnet) | `add project`, `bump version`, `csharpier`, `dotnet centralised package converter`, `dotnet slnx`, `fix csproj`, `nuget check updates` |
 | [Code Quality](./code-quality) | `cargo clippy`, `codacy bypass`, `codacy reanalyze commit`, `codeclimate bypass`, `prettier` |
 | [NPM / Node.js](./npm) | `npm check updates`, `npm dist`, `npm lint fix`, `update snapshot` |
-| [GitHub](./github) | `change runner`, `copy issue`, `copy labels`, `create labels`, `rerun checks`, `rerun workflows`, `revert commit` |
+| [GitHub](./github) | `change runner`, `copy issue`, `copy labels`, `create labels`, `pin action`, `rerun checks`, `rerun workflows`, `revert commit` |
+| [PHP](./php) | `composer update lock`, `phpcs` |
 
 ## Quick Reference
 
@@ -46,6 +47,7 @@ Commands in the documentation use the following indicators:
 | `@gstraccini add project <projectPath>` | .NET | 🔒 |
 | `@gstraccini bump version <version> [project]` | .NET | 🔒 |
 | `@gstraccini csharpier` | .NET | 🔒 |
+| `@gstraccini dotnet centralised package converter [autofix]` | .NET | 🔒 |
 | `@gstraccini dotnet slnx` | .NET | 🔒 |
 | `@gstraccini fix csproj` | .NET | 🔒 |
 | `@gstraccini nuget check updates [filter]` | .NET | 🔒 |
@@ -62,6 +64,9 @@ Commands in the documentation use the following indicators:
 | `@gstraccini copy issue <repository>` | GitHub | — |
 | `@gstraccini copy labels <repository>` | GitHub | — |
 | `@gstraccini create labels [style] [categories]` | GitHub | — |
+| `@gstraccini pin action [workflow]` | GitHub | 🔒 |
 | `@gstraccini rerun checks [conclusion]` | GitHub | 🔒 |
 | `@gstraccini rerun workflows [conclusion]` | GitHub | 🔒 |
 | `@gstraccini revert commit <sha1>` | GitHub | 🔒 |
+| `@gstraccini composer update lock` | PHP | 🔒 |
+| `@gstraccini phpcs [standard]` | PHP | 🔒 |
