@@ -22,7 +22,7 @@ enabled = true
   [analyzers.meta]
   plugins = ["react"]
   environment = ["browser", "nodejs"]
-  module_system = "esm"
+  module_system = "es-modules"
   dialect = "typescript"
 
 [[analyzers]]
