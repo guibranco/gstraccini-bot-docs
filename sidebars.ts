@@ -3,6 +3,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docsSidebar: [
     'intro',
+    'events',
     {
       type: 'category',
       label: 'Commands',
@@ -17,6 +18,7 @@ const sidebars: SidebarsConfig = {
         'commands/code-quality',
         'commands/npm',
         'commands/github',
+        'commands/php',
       ],
     },
   ],

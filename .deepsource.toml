@@ -21,7 +21,7 @@ enabled = true
 
   [analyzers.meta]
   plugins = ["react"]
-  environment = ["browser", "node"]
+  environment = ["browser", "nodejs"]
   module_system = "esm"
   dialect = "typescript"
 
@@ -33,5 +33,3 @@ enabled = true
 name = "test-coverage"
 enabled = true
 
-  [analyzers.meta]
-  should_analyze_coverage = true

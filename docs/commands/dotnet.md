@@ -73,6 +73,29 @@ Formats C# code using [CSharpier](https://csharpier.com). Only applicable to **.
 
 ---
 
+## `dotnet centralised package converter`
+
+Converts projects to use centralized package management using [central-pkg-converter](https://github.com/Webreaper/CentralisedPackageConverter). Only applicable to **.NET** projects.
+
+**Usage:**
+```
+@gstraccini dotnet centralised package converter [autofix true|false]
+```
+
+**Parameters:**
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `autofix` | ❌ | Whether to automatically fix and apply the changes (`true` or `false`). Defaults to `false` |
+
+**Examples:**
+```
+@gstraccini dotnet centralised package converter
+@gstraccini dotnet centralised package converter autofix true
+```
+
+---
+
 ## `dotnet slnx`
 
 Migrates `.sln` files to the newer `.slnx` format using `dotnet sln migrate`. Only applicable to **.NET** projects.

@@ -177,3 +177,26 @@ Reverts a commit using its SHA1. The revert is committed directly into the PR br
 ```
 @gstraccini revert commit a1b2c3d
 ```
+
+---
+
+## `pin action`
+
+Pins GitHub Actions references to their commit SHA using [pin-github-action](https://www.npmjs.com/package/pin-github-action).
+
+**Usage:**
+```
+@gstraccini pin action [workflow]
+```
+
+**Parameters:**
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `workflow` | ❌ | The workflow file path or glob pattern to pin. Defaults to `.github/workflows/*.yml` when omitted |
+
+**Examples:**
+```
+@gstraccini pin action
+@gstraccini pin action .github/workflows/ci.yml
+```
