@@ -1,85 +1,65 @@
-# ![GStraccini-bot](https://raw.githubusercontent.com/guibranco/gstraccini-bot-website/main/src/images/logo-white.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/guibranco/gstraccini-bot-website/main/src/images/logo-white.png" alt="GStraccini-bot" width="220" />
+</p>
 
-🤖 :octocat: **GStraccini-bot** is a GitHub bot designed to keep your repository organized and healthy by automating tasks like managing pull requests, issues, comments, and commits. This allows you to focus on solving real problems.
+<h1 align="center">GStraccini-bot Documentation</h1>
 
-[![Deploy via ftp](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/deploy.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/deploy.yml)
-[![PHP Linting](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/php-lint.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/php-lint.yml)
-[![JSON/YAML validation](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/json-yaml-lint.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/json-yaml-lint.yml)
-[![Shell checker](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/shell-checker.yml/badge.svg)](https://github.com/guibranco/gstraccini-bot-service/actions/workflows/shell-checker.yml)
+<p align="center">
+  🤖 :octocat: <strong>GStraccini-bot</strong> is a GitHub bot designed to keep your repository organized and healthy by automating tasks like managing pull requests, issues, comments, and commits. This allows you to focus on solving real problems.
+</p>
+
+<p align="center">
+  <a href="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/deploy.yml"><img src="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/deploy.yml/badge.svg" alt="Deploy via FTP"></a>
+  <a href="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/json-yaml-lint.yml"><img src="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/json-yaml-lint.yml/badge.svg" alt="JSON/YAML validation"></a>
+</p>
+
+<p align="center">
+  <a href="https://bot.straccini.com"><strong>Live Dashboard</strong></a> ·
+  <a href="https://docs.bot.straccini.com"><strong>Documentation</strong></a> ·
+  <a href="https://docs.bot.straccini.com/docs/commands"><strong>Commands Reference</strong></a> ·
+  <a href="https://github.com/apps/gstraccini"><strong>Install the Bot</strong></a>
+</p>
 
 ---
 
-## About the Bot
+## 🤖 About the Bot
 
 [GStraccini-bot](https://bot.straccini.com) automates essential repository tasks, managing pull requests, issues, comments, and commits to help maintain a clean, organized, healthy project environment. This lets you focus on development and problem-solving.
 
----
+## 🌐 About This Repository
 
-## About This Repository
+This repository contains the documentation for [GStraccini-bot](https://github.com/apps/gstraccini), available at **[bot.straccini.com](https://bot.straccini.com)**.
 
-This repository contains documentation for [GStraccini-bot](https://github.com/apps/gstraccini).
-
----
-
-## Installation
+## 🚀 Installation
 
 To install the bot:
 
 1. Visit the [GitHub Apps page](https://github.com/apps/gstraccini).
 2. Install it for your account, organization, or selected repositories.
 
-You can see an updated list of available commands by commenting `@gstraccini help` on a pull request or issue.
+You can see an updated list of available commands by commenting `@gstraccini help` on a pull request or issue, or by browsing the [documentation website](https://docs.bot.straccini.com).
 
----
+## ⚡ Available Commands
 
-## Available Commands
+GStraccini-bot can handle various tasks through chat commands — from managing pull requests to running linters, formatters, and CI/CD actions.
 
-GStraccini-bot can handle various tasks. Here’s a list of commands:
+For the full, up-to-date list of commands and how to use them, see the **[Commands Reference](https://docs.bot.straccini.com/docs/commands)** on the documentation website.
 
-### Commands
-
-- `@gstraccini help`: Shows the help message with available commands.
-- `@gstraccini add project <projectPath>`: Adds a project to the solution file (only for .NET projects).
-- `@gstraccini appveyor build <type>`: Runs the AppVeyor build for the target commit and/or pull request.
-- `@gstraccini appveyor bump version <component>`: Bumps the CI version in AppVeyor.
-- `@gstraccini appveyor register`: Registers the repository in AppVeyor.
-- `@gstraccini appveyor reset`: Resets the AppVeyor build number for the target repository.
-- `@gstraccini bump version <version> <project>`: Bumps the .NET version in .csproj files.
-- `@gstraccini cargo clippy`: Formats the Rust code using Cargo Clippy (only for Rust projects).
-- `@gstraccini change runner <runner> <workflow> <jobs>`: Changes the GitHub action runner in a workflow file (.yml).
-- `@gstraccini codacy bypass`: Bypasses the Codacy analysis for the target commit and/or pull request.
-- `@gstraccini codacy reanalyze commit`: Reanalyzes the Codacy last commit in a pull request.
-- `@gstraccini codeclimate bypass`: Bypasses the CodeClimate analysis for the target commit and/or pull request.
-- `@gstraccini copy labels <repository>`: Copies the labels from another repository.
-- `@gstraccini copy issue <repository>`: Copies an issue from one repository to another.
-- `@gstraccini create labels <style> <categories>`: Creates the default labels in the repository.
-- `@gstraccini csharpier`: Formats the C# code using CSharpier (only for .NET projects).
-- `@gstraccini fix csproj`: Updates the .csproj file with the packages.config version of NuGet packages (only for .NET Framework projects).
-- `@gstraccini npm check updates`: Updates dependencies in a package.json and package-lock.json.
-- `@gstraccini npm dist`: Generates or regenerates the dist files.
-- `@gstraccini prettier`: Formats the code using Prettier.
-- `@gstraccini rerun checks <conclusion>`: Reruns the checks in the target pull request.
-- `@gstraccini rerun workflows <conclusion>`: Reruns the workflows (actions) in the target pull request.
-- `@gstraccini review`: Enables review for the target pull request.
-- `@gstraccini update snapshot`: Updates test snapshots (npm test -- -u) (only for Node.js projects).
-
-> [!Note]
+> [!NOTE]
 > If you are not allowed to use the bot, a thumbs-down reaction will be added to your comment.
 
----
-
-## How It Works
+## 🧩 How It Works
 
 GStraccini-bot uses several components to manage repositories:
 
-- [API](https://github.com/guibranco/gstraccini-bot-api): The bot’s API project. Stats and configuration endpoints.
-- [Docs](https://github.com/guibranco/gstraccini-bot-docs): The bot's documentation.
-- [Handler](https://github.com/guibranco/gstraccini-bot-handler): Handles incoming webhooks.
-- [Service](https://github.com/guibranco/gstraccini-bot-service): The bot's service project. The main worker who processes tasks
-- [Website](https://github.com/guibranco/gstraccini-bot-website): Provides the bot's landing page and dashboard.
-- [Workflows](https://github.com/guibranco/gstraccini-bot-workflows): Execute GitHub Actions.
-
----
+| Component | Description |
+| --- | --- |
+| [API](https://github.com/guibranco/gstraccini-bot-api) | The bot's API project. Stats and configuration endpoints. |
+| [Docs](https://github.com/guibranco/gstraccini-bot-docs) | The bot's documentation ([website](https://docs.bot.straccini.com)). |
+| [Handler](https://github.com/guibranco/gstraccini-bot-handler) | Handles incoming webhooks. |
+| [Service](https://github.com/guibranco/gstraccini-bot-service) | The bot's service project. The main worker who processes tasks. |
+| [Website](https://github.com/guibranco/gstraccini-bot-website) | Provides the bot's landing page and dashboard. |
+| [Workflows](https://github.com/guibranco/gstraccini-bot-workflows) | Executes GitHub Actions. |
 
 ## ⏱️ Cronjobs
 
@@ -96,12 +76,11 @@ GStraccini-bot runs automated tasks at regular intervals on its infrastructure:
 | Repositories | ![Repositories](https://healthchecks.io/b/3/4ef0ee6c-38f8-4c79-b9f7-049438bd39a9.svg) | 🕛 every 1 minute |
 | Users | ![Users](https://healthchecks.io/b/3/fb14f4cc-0ee1-4da2-94eb-bd5f3be46e9b.svg) | 🕛 every 1 minute |
 
----
+## 🔗 Useful Links
 
-## Useful Links
-
-- [GitHub Marketplace](https://github.com/marketplace/gstraccini-bot)
-- [GitHub App](https://github.com/apps/gstraccini)
-- [Repository on GitHub](https://github.com/guibranco/gstraccini-bot-service)
-- [Bot's Dashboard](https://bot.straccini.com)
-- [Bot's Documentation](https://docs.bot.straccini.com)
+- 🛒 [GitHub Marketplace](https://github.com/marketplace/gstraccini-bot)
+- 📦 [GitHub App](https://github.com/apps/gstraccini)
+- 💻 [Repository on GitHub](https://github.com/guibranco/gstraccini-bot-website)
+- 📊 [Bot's Dashboard](https://bot.straccini.com)
+- 📚 [Bot's Documentation](https://docs.bot.straccini.com)
+- ⚡ [Commands Reference](https://docs.bot.straccini.com/docs/commands)
