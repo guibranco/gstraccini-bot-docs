@@ -10,7 +10,6 @@
 
 <p align="center">
   <a href="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/deploy.yml"><img src="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/deploy.yml/badge.svg" alt="Deploy via FTP"></a>
-  <a href="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/json-yaml-lint.yml"><img src="https://github.com/guibranco/gstraccini-bot-docs/actions/workflows/json-yaml-lint.yml/badge.svg" alt="JSON/YAML validation"></a>
 </p>
 
 <p align="center">
