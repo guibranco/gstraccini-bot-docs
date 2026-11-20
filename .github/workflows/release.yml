@@ -53,24 +53,8 @@ jobs:
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: build-output
-          path: dist/
+          path: build/
 
-      - name: Test with coverage
-        run: npm run test:coverage
-
-      - name: Upload coverage artifact
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
-        with:
-          name: coverage
-          path: coverage/
-      
-      - name: Report results to DeepSource
-        run: |
-          curl -fsSL https://cli.deepsource.com/install | BINDIR=./bin sh
-          ./bin/deepsource report --analyzer test-coverage --key javascript --value-file coverage/lcov.info
-        env:
-          DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}
-  
   create_release:
     name: Create release
     needs: [build]

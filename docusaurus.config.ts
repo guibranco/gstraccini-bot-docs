@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Automate your GitHub repository tasks with ease',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.bot.straccini.com',
+  url: 'https://docs.gstraccini.bot',
   baseUrl: '/',
 
   organizationName: 'guibranco',
