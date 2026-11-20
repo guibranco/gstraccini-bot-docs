@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gstraccini-bot-docs",
+  "compatibility_date": "2026-11-20",
+  // Static Docusaurus site: no Worker script, assets only.
+  "assets": {
+    "directory": "./build",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    {
+      "pattern": "docs.gstraccini.bot",
+      "custom_domain": true
+    }
+  ]
+}
